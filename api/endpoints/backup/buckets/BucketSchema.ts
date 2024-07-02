@@ -1,4 +1,4 @@
-import {z} from 'zod';
+import { z } from "zod";
 
 const bucketSchema = z.object({
   id: z.number(),
@@ -16,4 +16,3 @@ const bucketSchema = z.object({
 
 export { bucketSchema };
 export type BucketResponseSchema = z.infer<typeof bucketSchema>;
-

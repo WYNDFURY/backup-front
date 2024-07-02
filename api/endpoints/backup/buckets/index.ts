@@ -1,5 +1,3 @@
 import StoreBucketEndpoint from "./StoreBucketEndpoint";
 
-export {
-  StoreBucketEndpoint as ApiBackupStoreBucketEndpoint,
-}
+export { StoreBucketEndpoint as ApiBackupStoreBucketEndpoint };

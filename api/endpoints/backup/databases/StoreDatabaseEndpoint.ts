@@ -7,25 +7,25 @@ import { databaseSchema } from "./DatabaseSchema";
 
 const schema = z.object({
   data: databaseSchema,
-})
+});
 
 class StoreDatabaseEndpoint {
   private client: Client;
 
-  constructor(){
+  constructor() {
     this.client = new Client(new BackupCredential());
   }
 
-  public async store(data: ApiBackupDatabaseStoreData){
+  public async store(data: ApiBackupDatabaseStoreData) {
     const request = new Request()
       .setVerb("PUT")
       .setUrl("databases")
       .addData(data as any);
 
-      return useResponseParser({
-        response: await this.client.try(request),
-        schema,
-      })
+    return useResponseParser({
+      response: await this.client.try(request),
+      schema,
+    });
   }
 }
 

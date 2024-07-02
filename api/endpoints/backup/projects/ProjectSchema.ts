@@ -1,6 +1,6 @@
-import {z} from 'zod';
-import { databaseSchema } from '../databases/DatabaseSchema';
-import { bucketSchema } from '../buckets/BucketSchema';
+import { z } from "zod";
+import { databaseSchema } from "../databases/DatabaseSchema";
+import { bucketSchema } from "../buckets/BucketSchema";
 
 const projectSchema = z.object({
   id: z.number(),

@@ -1,3 +1,3 @@
 import BackupCredential from "./BackupCredential";
 
-export {BackupCredential};
+export { BackupCredential };

@@ -5,8 +5,8 @@ import { projectSchema } from "./ProjectSchema";
 import { BackupCredential } from "~/api/credentials/backup";
 
 const schema = z.object({
-  data: projectSchema.array(), 
-})
+  data: projectSchema.array(),
+});
 
 class IndexProjectEndpoint {
   private client: Client;
@@ -21,9 +21,8 @@ class IndexProjectEndpoint {
     return useResponseParser({
       response: await this.client.try(request),
       schema,
-    })
+    });
   }
-
 }
 
 export default IndexProjectEndpoint;

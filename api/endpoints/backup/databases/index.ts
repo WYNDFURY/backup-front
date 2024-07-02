@@ -1,5 +1,3 @@
 import StoreDatabaseEndpoint from "./StoreDatabaseEndpoint";
 
-export {
-  StoreDatabaseEndpoint as ApiBackupStoreDatabaseEndpoint,
-}
+export { StoreDatabaseEndpoint as ApiBackupStoreDatabaseEndpoint };

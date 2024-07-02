@@ -7,27 +7,26 @@ import { bucketSchema } from "./BucketSchema";
 
 const schema = z.object({
   data: bucketSchema,
-})
+});
 
 class StoreBucketEndpoint {
+  private client: Client;
 
-private client: Client;
-
-  constructor(){
+  constructor() {
     this.client = new Client(new BackupCredential());
   }
 
-  public async store(data: ApiBackupBucketStoreData){
+  public async store(data: ApiBackupBucketStoreData) {
     const request = new Request()
       .setVerb("POST")
       .setUrl("buckets")
       .addData(data as any);
 
-      return useResponseParser({
-        response: await this.client.try(request),
-        schema,
-      })
+    return useResponseParser({
+      response: await this.client.try(request),
+      schema,
+    });
   }
 }
 
-export default StoreBucketEndpoint; 
+export default StoreBucketEndpoint;

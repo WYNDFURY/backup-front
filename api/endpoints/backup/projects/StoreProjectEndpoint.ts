@@ -6,8 +6,8 @@ import { z } from "zod";
 import type { ApiBackupProjectStoreData } from "~/types";
 
 const schema = z.object({
-  data: projectSchema, 
-})
+  data: projectSchema,
+});
 
 class StoreProjectEndpoint {
   private client: Client;
@@ -25,7 +25,7 @@ class StoreProjectEndpoint {
     return useResponseParser({
       response: await this.client.try(request),
       schema,
-    })
+    });
   }
 }
 
