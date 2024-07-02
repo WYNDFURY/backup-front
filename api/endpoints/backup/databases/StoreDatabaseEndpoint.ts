@@ -18,7 +18,7 @@ class StoreDatabaseEndpoint {
 
   public async store(data: ApiBackupDatabaseStoreData) {
     const request = new Request()
-      .setVerb("PUT")
+      .setVerb("POST")
       .setUrl("databases")
       .addData(data as any);
 

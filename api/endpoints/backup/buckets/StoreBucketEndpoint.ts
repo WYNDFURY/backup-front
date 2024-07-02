@@ -18,7 +18,7 @@ class StoreBucketEndpoint {
 
   public async store(data: ApiBackupBucketStoreData) {
     const request = new Request()
-      .setVerb("POST")
+      .setVerb("PUT")
       .setUrl("buckets")
       .addData(data as any);
 
